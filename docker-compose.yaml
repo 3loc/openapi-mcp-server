@@ -1,9 +1,40 @@
 services:
-  openapi-mcp-server:
+  stdio-mcp-server:
+    container_name: stdio-mcp-server
     image: 3loc/openapi-mcp-server
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - MODE=stdio # Can be: stdio, sse, or openapi
+    stdin_open: true
+    tty: false
+    restart: unless-stopped
+
+  sse-mcp-server:
+    container_name: sse-mcp-server
+    image: 3loc/openapi-mcp-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MODE=sse # Can be: stdio, sse, or openapi
+    ports:
+      - "8001:8000"  # Host:Container
+    stdin_open: true
+    tty: false
+    restart: unless-stopped
+
+  openapi-mcp-server:
+    container_name: openapi-mcp-server
+    image: 3loc/openapi-mcp-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MODE=openapi
+    ports:
+      - "8002:8000"  # Host:Container
     stdin_open: true
     tty: false
     restart: unless-stopped

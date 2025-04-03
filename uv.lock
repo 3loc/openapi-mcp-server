@@ -166,10 +166,14 @@ version = "0.1.0"
 source = { virtual = "openapi_mcp_server" }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "mcp", extras = ["cli"] }]
+requires-dist = [
+    { name = "mcp", extras = ["cli"] },
+    { name = "uvicorn" },
+]
 
 [[package]]
 name = "pydantic"
