@@ -44,17 +44,6 @@ The server can be configured using an `mcp.json` file. Here's an example configu
 }
 ```
 
-### Configuration Explanation
-
-- `mcpServers`: Object containing server configurations
-- `openapi-mcp-server`: Server identifier
-  - `command`: The command to run the server (in this case using Docker)
-  - `args`: Array of arguments passed to the command
-    - `--rm`: Remove container when it exits
-    - `-i`: Keep STDIN open for stdio communication
-    - `--name`: Specify container name
-    - Last argument specifies the Docker image to use
-
 ## Development
 
 The project provides a foundation for implementing an MCP server with multiple communication protocols. Currently, only the stdio implementation is complete, with SSE and OpenAPI endpoints planned for future implementation.
