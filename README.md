@@ -1,6 +1,6 @@
 # OpenAPI MCP Server
 
-This is a skeleton project that you can use as a starting point for building your own MCP server. The example addition function demonstrates how to implement handlers across all three protocols.
+This is a skeleton project that you can use as a starting point for building your own MCP server supporting all three protocols.
 
 ## Features
 [X] - Standard I/O (stdio)
