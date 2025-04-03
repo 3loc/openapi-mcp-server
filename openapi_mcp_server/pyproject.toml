@@ -1,0 +1,7 @@
+[project]
+name = "openapi_mcp_server"
+version = "0.1.0"
+description = "A skeleton OpenAI and MCP server in one."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [ "mcp[cli]" ]

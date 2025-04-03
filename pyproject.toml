@@ -1,0 +1,2 @@
+[tool.uv.workspace]
+members = ["openapi_mcp_server"]

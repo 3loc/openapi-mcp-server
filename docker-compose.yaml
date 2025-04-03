@@ -1,0 +1,9 @@
+services:
+  openapi-mcp-server:
+    image: 3loc/openapi-mcp-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: false
+    restart: unless-stopped
